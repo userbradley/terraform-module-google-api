@@ -14,7 +14,7 @@ No outputs.
 ## Example enabling only compute
 
 ```hcl
-module "iam-binding" {
+module "api" {
   source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git"
   api    = ["compute.googleapis.com"]
 }
@@ -41,7 +41,7 @@ storage.googleapis.com               Cloud Storage API
 
 `main.tf`
 ```hcl
-module "iam-binding" {
+module "api" {
   source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git"
   api    = var.api
 }
