@@ -6,6 +6,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_api"></a> [api](#input\_api) | n/a | `list(string)` | n/a | yes |
+| <a name="input_dds"></a> [dds](#input\_dds) | n/a | `bool` | `false` | no |
 
 ## Outputs
 
