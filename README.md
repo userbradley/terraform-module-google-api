@@ -1,4 +1,4 @@
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Maintainer](https://img.shields.io/badge/Built%20By-Bradley-brightgreen?style=for-the-badge&logo=terraform_)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![Maintainer](https://img.shields.io/badge/Built%20By-Bradley-brightgreen?style=for-the-badge&logo=terraform)
 
 ---
 
