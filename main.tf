@@ -1,7 +1,7 @@
 resource "google_project_service" "project" {
   for_each = toset(var.api)
   service = each.key
-
+disable_dependent_services = var.dds
   timeouts {
     create = "20m"
     read = "10m"

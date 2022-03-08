@@ -1,5 +1,5 @@
-module "iam-binding" {
-  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git//modules/simple"
+module "api" {
+  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git"
   api    = var.api
 }
 
