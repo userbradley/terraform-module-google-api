@@ -15,7 +15,7 @@ No outputs.
 
 ```hcl
 module "iam-binding" {
-  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git//modules/simple"
+  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git"
   api    = ["compute.googleapis.com"]
 }
 
@@ -42,7 +42,7 @@ storage.googleapis.com               Cloud Storage API
 `main.tf`
 ```hcl
 module "iam-binding" {
-  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git//modules/simple"
+  source = "git::ssh://git@github.com/userbradley/terraform-module-google-api.git"
   api    = var.api
 }
 
