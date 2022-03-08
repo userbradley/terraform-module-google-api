@@ -1,0 +1,16 @@
+resource "google_project_service" "sqlcomponent" {
+  project = var.project_id
+  service = "sql-component.${var.api-endpoint}"
+  count = var.sqlcomponent ? 1:0
+
+  timeouts {
+    create = var.timeout_create
+    update = var.timeout_update
+  }
+
+  disable_dependent_services = var.disable_dependent_services
+}
+
+variable "sqlcomponent" {
+type = bool
+}

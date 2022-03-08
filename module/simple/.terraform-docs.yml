@@ -1,0 +1,26 @@
+# .terraform-docs.yml
+content: |-
+  {{ .Header }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+  
+  ## Example enabling only compute
+
+  ```hcl
+  {{ include "example/example-1/main.tf" }}
+  ```
+  ---
+  
+  ## Example enabling a few API's 
+
+  `main.tf`
+  ```hcl
+  {{ include "example/example-2/main.tf" }}
+  ```
+  
+  `variables.tf`
+  ```hcl
+  {{ include "example/example-2/terraform.tfvars" }}
+  ```
