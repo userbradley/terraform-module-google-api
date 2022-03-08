@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"iam-binding","Source":"git::ssh://git@github.com/userbradley/terraform-module-google-api.git//modules/simple","Dir":".terraform/modules/iam-binding/modules/simple"}]}
