@@ -1,0 +1,40 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  default:
+    desc: Lists all available tasks
+    cmds:
+      - task --list-all
+    silent: true
+
+  readme:
+    desc: Generates the README file
+    silent: true
+    aliases:
+      - docs
+    cmds:
+      - terraform-docs md . > README.md
+
+
+  readme-full:
+    desc: Generates the API list and also creates the README - Use before release
+    silent: true
+    cmds:
+      - task: api-list
+      - echo "Creating the README"
+      - task: readme
+
+
+  api-list:
+    desc: Generates a list of API's we can enable
+    silent: true
+    cmds:
+      - echo "This will take about 30 seconds to complete"
+      - echo "Generating CSV of all API's"
+      - gcloud services list --available  --format="csv(NAME,TITLE)" > docs/full.csv
+      - echo "Formatting the list now"
+      - csvtomd docs/full.csv > docs/full.md
+      - defer: rm docs/full.csv
