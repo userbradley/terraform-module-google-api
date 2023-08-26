@@ -1,0 +1,19 @@
+name: Comment on PR next version
+on:
+  pull_request:
+    types:
+      - labeled
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  comment-pr:
+    if: github.event.action == 'labeled'
+    runs-on: ubuntu-latest
+    name: Comment on PR the version to be released
+    steps:
+      - uses: actions/checkout@v3
+      - name: Post bumpr status comment
+        uses: haya14busa/action-bumpr@v1

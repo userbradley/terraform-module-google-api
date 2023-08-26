@@ -1,0 +1,74 @@
+# .terraform-docs.yml
+header-from: "docs/header.md"
+footer-from: "docs/footer.md"
+formatter: "md doc"
+content: |-
+  ![Bradley](https://img.shields.io/badge/Built%20By%20Bradley-%234287f5?style=for-the-badge&logo=googlecloud&logoColor=white)
+   ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+  
+  {{ .Header }}
+  
+  ### Terragrunt Example
+  
+  ```hcl
+  {{include "docs/example/terragrunt.hcl" }}
+  ```
+
+  ### Terraform Example
+  
+  ```hcl
+  {{ include "docs/example/example-1.tf" }}
+  ```
+  
+  {{ .Inputs }}
+
+  ## Example enabling a few API's 
+
+
+  ```hcl
+  {{ include "docs/example/example-2.tf" }}
+  ```
+  
+  ## Disable on Destroy
+  
+  The below line line will need to be added, then a terraform apply run, and then a destroy
+  
+  > If false, disable the service when the Terraform resource is destroyed.
+  
+  ```diff
+  {{ include "docs/example/disable_on_destroy.tf" }}
+  ```
+  
+  ## Disable Dependent Services
+  
+  The below line line will need to be added, then a terraform apply run, and then a destroy
+  
+  > If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
+  
+  ```diff
+  {{include "docs/example/disable_dependent_services.tf" }}
+  ```
+  
+  
+ 
+  ## Additional Documentation
+  
+  The below section is designed to aid those who look after the module
+  
+  ## Simple list of most common services
+  
+  {{ include "docs/simplelist.md" }}
+  
+  ## List services we can enable
+  
+  {{ include "docs/listservices.md" }}
+  
+  ## How to generate documentation
+  
+  {{ include "docs/documentation.md" }}
+  
+  ---
+  
+  ## Full list of services we can enable
+  
+  {{ include "docs/full.md" }}
