@@ -8,6 +8,12 @@ content: |-
   
   {{ .Header }}
   
+  ### Terragrunt no generate 
+  
+  ```hcl
+  {{ include "docs/example/tg-no-gen.hcl" }}
+  ```
+  
   ### Terragrunt Example
   
   ```hcl
@@ -31,7 +37,7 @@ content: |-
   
   ## Disable on Destroy
   
-  The below line line will need to be added, then a terraform apply run, and then a destroy
+  The below line will need to be added, then a terraform apply run, and then a destroy
   
   > If false, disable the service when the Terraform resource is destroyed.
   
@@ -41,7 +47,7 @@ content: |-
   
   ## Disable Dependent Services
   
-  The below line line will need to be added, then a terraform apply run, and then a destroy
+  The below line will need to be added, then a terraform apply run, and then a destroy
   
   > If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
   
