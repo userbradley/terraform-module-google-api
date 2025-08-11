@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Bump tag and cut release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Bumpr Create Tag
         id: bumpr
