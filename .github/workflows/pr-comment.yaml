@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Comment on PR the version to be released
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Post bumpr status comment
         uses: haya14busa/action-bumpr@v1
